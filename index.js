@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -24,6 +25,11 @@ const questions = [
     type: "input",
     name: "title",
     message: "What is your projects name?"
+  },
+  {
+    type: "input",
+    name: "tech",
+    message: "What technology did you use in the"
   },
   {
     type: "input",
@@ -58,6 +64,12 @@ const questions = [
     name: "contribute",
     message:
       "What are the guidelines for open-source contributions to the repo?"
+  },
+  {
+    type: "input",
+    name: "credit",
+    message:
+      "Are there any resources or individuals you would like to credit for helping with the project?"
   }
 ];
 
@@ -65,7 +77,13 @@ const questions = [
 const writeToFile = (fileName, data) =>
   fs.writeFileSync(path.join(process.cwd(), "output", fileName), data);
 // function to initialize program
-const init = () => {};
+const init = () => {
+  // run inquirer prompts
+  inquirer.prompt(questions).then(response => {
+    writeToFile("README.md", generateMarkdown({ ...response }));
+    console.log("README generated!");
+  });
+};
 
 // function call to initialize program
 init();
