@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "lint": "eslint -c .eslint.js --ext js",
-    "lint-fix": "./node_modules/.bin/eslint/ - fix"
-  },
+    "precommit": "lint-staged"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonythetiger323/README-generator.git"
