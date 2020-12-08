@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "precommit": "lint-staged"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonythetiger323/README-generator.git"
@@ -35,12 +35,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.2.0",
-    "husky": "^4.3.5",
-    "lint-staged": "^10.5.3",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1"
-  },
-  "husky": {
-    "pre-commit": "lint-staged"
   }
 }
