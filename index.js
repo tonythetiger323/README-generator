@@ -29,7 +29,7 @@ const questions = [
   {
     type: "input",
     name: "tech",
-    message: "What technology did you use in the"
+    message: "What technology did you use in the project?"
   },
   {
     type: "input",
