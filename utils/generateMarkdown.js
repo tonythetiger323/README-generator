@@ -18,6 +18,21 @@ const licenseLink = license => {
     // If no license is selected return an empty string
     return "";
 }
+
+// function to write the license section
+const writeLicense = license => {
+    // If a license is selected write a license section for README
+    if(license !== "None") {
+        return (
+            `## License
+            
+            This project is licensed under the ${license} license.
+            `
+        );
+    };
+    
+    return "";
+}
 // function to generate markdown for READEME
 const generateMarkdown = data => {
     return `# ${data.title}
