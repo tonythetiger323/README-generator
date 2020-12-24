@@ -8,17 +8,6 @@ const licenseBadge = license => {
     return "";
 };
 
-
-// function make a link to license section for the Table of Contents if there is one
-const licenseLink = license => {
-    // If a license is selected return a link to license section
-    if(license !== "None"){
-        return `\n* [License](#license)\n`
-    }; 
-    // If no license is selected return an empty string
-    return "";
-}
-
 // function to write the license section
 const writeLicense = license => {
     // If a license is selected write a license section for README
@@ -36,7 +25,20 @@ const writeLicense = license => {
 // function to generate markdown for READEME
 const generateMarkdown = data => {
     return `# ${data.title}
+    ${licenseBadge(data.license)}
+
+    ## Description
     
+    ${data.description}
+
+    ## Table of Contents
+
+    * [Technology Used](#technology used)
+
+    * [Installation](#installation)
+
+    * [Usage](#usage)
+
     `;
 };
 
