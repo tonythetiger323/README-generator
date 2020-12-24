@@ -39,6 +39,41 @@ const generateMarkdown = data => {
 
     * [Usage](#usage)
 
+    * [Contributing](#contributing)
+
+    * [Tests](#tests)
+
+    * [Questions](#questions)
+
+    ## Installation
+
+    To install application properly with all of its necessary dependencies run:
+
+    ----------
+    ${data.install}
+    ----------
+
+    ## Usage
+
+    ${data.usage}
+
+    ## Contributing
+
+    ${data.contribute}
+
+    ## Tests
+
+    To run tests, run:
+
+    ----------
+    ${data.test}
+    ----------
+
+    ## Questions
+    Have any questions regarding the repo, send me an email at ${data.email}.
+
+    Interested in seeing more of what I've made? Take a look at [${data.github}](https://github.com/${data.github}/).
+
     `;
 };
 
